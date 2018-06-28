@@ -2,7 +2,7 @@
 
 if [ ! -d /var/www/speedtest/.git ] ; then
     cd /var/www
-    git clone https://github.com/adolfintel/speedtest.git
+    git clone https://github.com/samburney/speedtest.git
     cp /var/www/speedtest/example-gauges.html /var/www/speedtest/index.html
 fi
 
