@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bash
+
+if [ ! -d /var/www/speedtest/.git ] ; then
+    cd /var/www
+    git clone https://github.com/adolfintel/speedtest.git
+    cp /var/www/speedtest/example-gauges.html /var/www/speedtest/index.html
+fi
+
+chown -R www-data:www-data /var/www/speedtest

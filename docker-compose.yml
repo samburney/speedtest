@@ -1,0 +1,10 @@
+version: '2.4'
+
+services:
+  speedtest:
+    build: '.'
+    image: 'samburney/adolfintel-speedtest:latest'
+    ports:
+      - '80:80'
+    volumes:
+      - "./speedtest:/var/www/speedtest"
