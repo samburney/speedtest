@@ -2,7 +2,7 @@
 include_once('telemetry_settings.php');
 
 $ip=($_SERVER['REMOTE_ADDR']);
-$ua=($_SERVER['HTTP_USER_AGENT']);
+$ua=(isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['HTTP_USER_AGENT']);
 $lang=""; if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) $lang=($_SERVER['HTTP_ACCEPT_LANGUAGE']);
 $dl=($_POST["dl"]);
 $ul=($_POST["ul"]);
